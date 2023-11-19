@@ -2,7 +2,7 @@ import React from "react";
 
 function Header() {
   return (
-    <section>
+    <section className="container">
       <div className="flex items-center mb-28">
         <div>
           <div className="text-[80px] font-bold leading-[96%] mb-10">
