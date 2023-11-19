@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("../fonts/Inter/style.css");
+
+body {
+  @apply font-inter;
+}
