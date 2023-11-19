@@ -1,4 +1,10 @@
 @font-face {
+  src: url("./Inter-Light.ttf");
+  font-family: Inter;
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
   src: url("./Inter-Regular.ttf");
   font-family: Inter;
   font-weight: 400;

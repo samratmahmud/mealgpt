@@ -22,12 +22,12 @@ function Header() {
   const [tab, setTab] = React.useState(0);
   return (
     <section>
-      <div className="container pt-4 mb-16">
+      <div className="container pt-4 mb-9">
         <div className="bg-[#D9D9D9] w-full h-1 relative mb-5">
           <span className="absolute bg-primary w-[4%] h-1"></span>
         </div>
-        <div className="flex gap-[23%]">
-          <div className="hidden lg:block">
+        <div className="flex gap-[25%] mb-8">
+          <div role="button" className="hidden lg:block">
             <img src="/images/Arrow.svg" alt="" />
           </div>
           <div className="flex gap-5">
@@ -44,6 +44,9 @@ function Header() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="max-w-[705px] m-auto">
+          <img className="w-full h-[1px]" src="/images/Vector 14.png" alt="" />
         </div>
       </div>
     </section>
