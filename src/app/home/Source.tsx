@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 function Source() {
@@ -13,7 +14,7 @@ function Source() {
         </div>
         <div
           role="button"
-          className="flex gap-3 bg-white py-3.5 px-16 rounded-lg justify-center max-w-[210px] m-auto text-2xl font-medium"
+          className="flex gap-3 bg-white py-2 px-16 rounded-lg justify-center max-w-[210px] m-auto text-2xl font-medium btn_drop_shadow"
         >
           <img src="/images/Vector.svg" alt="" /> Star
         </div>

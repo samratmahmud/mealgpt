@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 
 const steps = [
@@ -18,25 +19,36 @@ const steps = [
   },
 ];
 
-function Journey() {
+function HowWorks() {
   return (
     <section className="container mb-52">
       <div className="text-2xl leading-[121%] text-primary mb-5">
         How it Works
       </div>
-      <div className="flex gap-9 mb-32">
-        <div className="text-[40px] font-medium leading-[41px] max-w-[733px]">
+      <div className="grid grid-cols-2 gap-9 mb-32">
+        <div className="text-[40px] font-medium leading-[41px]">
           Start Your Journey to a Healthier You Today in 3 Easy Steps!
         </div>
-        <div className="bg-black/50 w-full max-w-[371px] h-[1px] mt-5" />
+        <img
+          src="/images/Vector 14.png"
+          className="h-[1px] w-full mt-5"
+          alt=""
+        />
       </div>
-      <div className="flex text-center gap-14">
+      <div className="flex text-center gap-12">
         {steps.map(({title, contain}, index) => (
-          <div key={index} className="">
-            <div className="text-3xl text-white bg-primary py-1.5 px-4 rounded mb-[72px] inline-block">
-              {index + 1}
+          <div key={index} className="group">
+            <div className="mb-[72px] inline-block relative z-0">
+              <span className="relative z-20 text-white bg-primary py-1.5 px-4 rounded text-3xl block">
+                {index + 1}
+              </span>
+              <img
+                className="h-[1px] w-[450px] max-w-none absolute z-10 top-1/2 translate-y-1/2 group-last:hidden"
+                src="/images/Vector 37 (1).png"
+                alt=""
+              />
             </div>
-            <div className="text-3xl mb-7 text-[#121512]">{title}</div>
+            <div className="text-3xl mb-6 text-[#121512]">{title}</div>
             <div className="text-2xl text-[#121512]/60">{contain}</div>
           </div>
         ))}
@@ -45,4 +57,4 @@ function Journey() {
   );
 }
 
-export default Journey;
+export default HowWorks;

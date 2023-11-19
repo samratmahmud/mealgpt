@@ -7,12 +7,7 @@ interface layoutProps {
 
 function Layout(props: layoutProps) {
   const {children} = props;
-  return (
-    <div>
-      <Navbar />
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 }
 
 export default Layout;
