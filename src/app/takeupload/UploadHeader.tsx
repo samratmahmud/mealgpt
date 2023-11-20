@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function UploadHeader() {
   return (
     <section>
       <div className="container py-9">
@@ -25,4 +25,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default UploadHeader;

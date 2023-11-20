@@ -1,10 +1,15 @@
 import Buttons from "@/components/common/Buttons";
 import GenderItems from "@/components/common/GenderItems";
-import React from "react";
+import React, {useState} from "react";
 
 const items = ["Very Active", "Active", "Slightly Active", "Not Active"];
 
-function ActivityLevel() {
+interface GenderProps {
+  handelNext?: () => void;
+}
+
+function ActivityLevel({handelNext}: GenderProps) {
+  const [tab, setTab] = useState(1000000);
   return (
     <section>
       <div className="container max-w-[581px] m-auto text-center">
@@ -14,12 +19,16 @@ function ActivityLevel() {
         <div className="flex flex-col gap-3 mb-96">
           {items.map((item, index) => (
             <div key={index}>
-              <GenderItems item={item} />
+              <GenderItems
+                item={item}
+                isActive={tab === index}
+                handelClick={() => setTab(index)}
+              />
             </div>
           ))}
         </div>
         <div className="mb-28">
-          <Buttons name="CONTINUE" />
+          <Buttons onClick={handelNext} name="CONTINUE" />
         </div>
       </div>
     </section>

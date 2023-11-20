@@ -23,7 +23,7 @@ const pages = [
 function Header() {
   const [tab, setTab] = React.useState(0);
 
-  const handleNext = () => {
+  const handelNext = () => {
     setTab((v) => {
       return v + 1;
     });
@@ -55,9 +55,11 @@ function Header() {
           <img className="w-full h-[1px]" src="/images/Vector 14.png" alt="" />
         </div>
       </div>
-      {tab === 0 && <Gender handleNext={handleNext} />}
-      {tab === 1 && <WeightHeight handleNext={handleNext} />}
-      {tab === 2 && <ActivityLevel />}
+      {tab === 0 && <Gender handelNext={handelNext} />}
+      {tab === 1 && <WeightHeight handelNext={handelNext} />}
+      {tab === 2 && <ActivityLevel handelNext={handelNext} />}
+      {tab === 3 && <QuestionnaireComplete handelNext={handelNext} />}
+      {tab === 4 && <Congratulations />}
     </section>
   );
 }

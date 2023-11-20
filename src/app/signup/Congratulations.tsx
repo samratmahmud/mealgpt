@@ -16,7 +16,11 @@ const counts = [
   },
 ];
 
-function Congratulations() {
+interface GenderProps {
+  handelNext?: () => void;
+}
+
+function Congratulations({handelNext}: GenderProps) {
   return (
     <section>
       <div className="container max-w-[983px] m-auto text-center">
@@ -47,7 +51,7 @@ function Congratulations() {
           better!
         </div>
         <div className="inline-block mb-[87px]">
-          <Buttons name="CONTINUE" />
+          <Buttons onClick={handelNext} name="CONTINUE" />
         </div>
       </div>
     </section>

@@ -16,7 +16,7 @@ function Header() {
           </div>
           <div className="mb-3.5">
             <Link
-              href="/"
+              href="/foodvlog"
               role="button"
               className="text-2xl font-semibold bg-primary py-[13px] px-14 inline-block text-white rounded-lg btn_drop_shadow"
             >
