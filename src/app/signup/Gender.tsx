@@ -1,5 +1,6 @@
 "use client";
 import Buttons from "@/components/common/Buttons";
+import CheckBox from "@/components/common/CheckBox";
 import GenderItems from "@/components/common/GenderItems";
 import React, {useState} from "react";
 
@@ -13,7 +14,11 @@ const items = [
 
 const genderName = ["Male", "Female"];
 
-function Gender() {
+interface GenderProps {
+  handleNext?: () => void;
+}
+
+function Gender({handleNext}: GenderProps) {
   const [tab, setTab] = useState(0);
   return (
     <section>
@@ -21,7 +26,10 @@ function Gender() {
         <div className="text-3xl leading-normal mb-10">
           Let’s get to know about you to calculate accurate goals
         </div>
-        <div></div>
+        <div className="mb-3">
+          <CheckBox name="Male" />
+          <CheckBox name="Female" />
+        </div>
         <div className="text-[#00000066] mb-10">
           <GenderItems item="Age" />
         </div>
@@ -34,7 +42,7 @@ function Gender() {
           ))}
         </div>
         <div>
-          <Buttons name="CONTINUE" />
+          <Buttons onClick={handleNext} name="CONTINUE" />
         </div>
       </div>
     </section>

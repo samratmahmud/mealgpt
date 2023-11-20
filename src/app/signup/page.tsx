@@ -12,11 +12,8 @@ function page() {
     <main>
       <Navbar />
       <Header />
-      {/* <Gender /> */}
-      {/* <WeightHeight /> */}
-      {/* <ActivityLevel /> */}
       {/* <QuestionnaireComplete /> */}
-      <Congratulations />
+      {/* <Congratulations /> */}
     </main>
   );
 }

@@ -1,10 +1,10 @@
 import Buttons from "@/components/common/Buttons";
 import React from "react";
 
-function PictureSection() {
+function UploadImage() {
   return (
     <section>
-      <div className="pb-14">
+      <div className="pb-14 container px-12">
         <div className="py-56 bg-white mb-12">
           <div className="flex justify-center mb-5">
             <div
@@ -34,4 +34,4 @@ function PictureSection() {
   );
 }
 
-export default PictureSection;
+export default UploadImage;

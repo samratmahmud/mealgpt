@@ -2,24 +2,33 @@
 import SignupToggle from "@/components/common/SignupToggle";
 import Link from "next/link";
 import React from "react";
+import Gender from "./Gender";
+import WeightHeight from "./WeightHeight";
+import ActivityLevel from "./ActivityLevel";
+import QuestionnaireComplete from "./QuestionnaireComplete";
+import Congratulations from "./Congratulations";
 
 const pages = [
   {
     name: "Goals & Gender",
-    url: "",
   },
   {
     name: "Weight & Height",
-    url: "",
   },
   {
     name: "Activity Level",
-    url: "",
   },
 ];
 
 function Header() {
   const [tab, setTab] = React.useState(0);
+
+  const handleNext = () => {
+    setTab((v) => {
+      return v + 1;
+    });
+  };
+
   return (
     <section>
       <div className="container pt-4 mb-9">
@@ -31,17 +40,14 @@ function Header() {
             <img src="/images/Arrow.svg" alt="" />
           </div>
           <div className="flex gap-5">
-            {pages.map(({name, url}, index) => (
-              <div key={index}>
-                <Link href={url}>
-                  <SignupToggle
-                    number={index + 1}
-                    title={name}
-                    handelClick={() => setTab(index)}
-                    isActive={tab === index}
-                  />
-                </Link>
-              </div>
+            {pages.map(({name}, index) => (
+              <SignupToggle
+                key={index}
+                number={index + 1}
+                title={name}
+                handelClick={() => setTab(index)}
+                isActive={tab === index}
+              />
             ))}
           </div>
         </div>
@@ -49,6 +55,9 @@ function Header() {
           <img className="w-full h-[1px]" src="/images/Vector 14.png" alt="" />
         </div>
       </div>
+      {tab === 0 && <Gender handleNext={handleNext} />}
+      {tab === 1 && <WeightHeight handleNext={handleNext} />}
+      {tab === 2 && <ActivityLevel />}
     </section>
   );
 }

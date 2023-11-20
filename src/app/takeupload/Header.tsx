@@ -11,7 +11,7 @@ function Header() {
           <div className="text-2xl leading-normal">
             Take or upload a photo of your meal
           </div>
-          <div className="flex items-center gap-5">
+          <div role="button" className="flex items-center gap-5">
             <p>
               <img src="/images/Group 141.svg" alt="" />
             </p>

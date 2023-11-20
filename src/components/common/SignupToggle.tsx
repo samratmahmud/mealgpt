@@ -10,7 +10,7 @@ interface toggleProps {
 function SignupToggle(props: toggleProps) {
   const {number, title, isActive, handelClick} = props;
   return (
-    <div className="flex items-center" onClick={handelClick}>
+    <div role="button" className="flex items-center" onClick={handelClick}>
       <div
         className={`text-base lg:text-[#F8F6F6] text-[#F8F6F6]/[30%] py-0.5 px-2 bg-primary rounded-sm mr-3 ${
           isActive ? "" : "opacity-30"

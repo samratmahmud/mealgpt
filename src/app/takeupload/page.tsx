@@ -1,7 +1,8 @@
 import Navbar from "@/components/global/Navbar";
 import React from "react";
 import Header from "./Header";
-import PictureSection from "./PictureSection";
+import UploadImage from "./UploadImage";
+import PictureSections from "./PictureSections";
 
 function page() {
   return (
@@ -15,7 +16,8 @@ function page() {
         }}
       >
         <Header />
-        <PictureSection />
+        {/* <UploadImage /> */}
+        <PictureSections />
       </div>
     </main>
   );

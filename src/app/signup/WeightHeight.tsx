@@ -17,7 +17,11 @@ const weight = [
   },
 ];
 
-function WeightHeight() {
+interface WeightHeightProps {
+  handleNext?: () => void;
+}
+
+function WeightHeight({handleNext}: WeightHeightProps) {
   return (
     <section>
       <div className="container max-w-[581px] m-auto text-center">
@@ -50,7 +54,7 @@ function WeightHeight() {
           </div>
         </div>
         <div className="mb-28">
-          <Buttons name="CONTINUE" />
+          <Buttons onClick={handleNext} name="CONTINUE" />
         </div>
       </div>
     </section>

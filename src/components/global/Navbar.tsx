@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="">
       <div className="flex justify-between gap-5 items-center container py-5">
-        <Link href="/foodvlog">
+        <Link href="/signup">
           <img src="/images/Group 8.svg" alt="" />
         </Link>
         <div className="flex items-center gap-10">
