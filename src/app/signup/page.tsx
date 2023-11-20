@@ -15,7 +15,7 @@ function page() {
       {/* <Gender /> */}
       {/* <WeightHeight /> */}
       {/* <ActivityLevel /> */}
-      <QuestionnaireComplete />
+      {/* <QuestionnaireComplete /> */}
       <Congratulations />
     </main>
   );

@@ -6,12 +6,12 @@ function Navbar() {
   return (
     <nav className="">
       <div className="flex justify-between gap-5 items-center container py-5">
-        <Link href="/logpage">
+        <Link href="/foodvlog">
           <img src="/images/Group 8.svg" alt="" />
         </Link>
         <div className="flex items-center gap-10">
           <Link
-            href="/signup"
+            href="/takeupload"
             role="button"
             className="text-xl hover:underline duration-300"
           >
