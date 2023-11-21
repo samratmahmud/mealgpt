@@ -1,4 +1,4 @@
-import Navbar from "@/components/global/Navbar";
+import Navbar from "@/components/global/navbar/Navbar";
 import React from "react";
 import FoodMenu from "./FoodMenu";
 import FoodHeader from "./FoodHeader";

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import React from "react";
 
 function Signup() {
@@ -12,12 +13,12 @@ function Signup() {
           <div className="-mt-[8%]">
             <img src="/images/Vector 7.svg" alt="" />
           </div>
-          <div
-            role="button"
+          <Link
+            href="/signup"
             className="text-3xl font-semibold text-white py-4 px-[106px] rounded-lg bg-primary whitespace-nowrap"
           >
             Try it for free
-          </div>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import React from "react";
 
 function UploadHeader() {
@@ -6,9 +7,9 @@ function UploadHeader() {
     <section>
       <div className="container py-9">
         <div className="flex items-center justify-between">
-          <div role="button">
+          <Link href="/foodvlog" role="button">
             <img src="/images/Arrow.svg" alt="" />
-          </div>
+          </Link>
           <div className="text-2xl leading-normal">
             Take or upload a photo of your meal
           </div>

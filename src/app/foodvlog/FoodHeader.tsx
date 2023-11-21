@@ -1,20 +1,23 @@
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import React from "react";
 
 function FoodHeader() {
   return (
     <section>
-      <div className="container mt-4">
-        <div className="flex justify-between">
-          <div role="button">
-            <img src="/images/Arrow (1).svg" alt="" />
-          </div>
+      <div className="container mt-8">
+        <img className="h-[1px] w-full" src="/images/Vector 9.png" alt="" />
+        <div className="flex justify-between mt-2">
+          <button role="button">
+            <img className="opacity-30" src="/images/Arrow.svg" alt="" />
+          </button>
           <div className="flex flex-col gap-3 items-center">
-            <p className="text-3xl font-semibold leading-normal">Day 1</p>
+            <h4 className="text-3xl font-semibold leading-normal">Day 1</h4>
             <p className="text-2xl leading-normal mb-12">Thursday</p>
           </div>
-          <div role="button">
+          <Link href="/take_upload" role="button">
             <img className="rotate-180" src="/images/Arrow.svg" alt="" />
-          </div>
+          </Link>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import HowWorks from "./home/HowWorks";
 import Signup from "./home/Signup";
 import Source from "./home/Source";
 import Footer from "./home/Footer";
-import Navbar from "@/components/global/Navbar";
+import Navbar from "@/components/global/navbar/Navbar";
 
 export default function Home() {
   return (

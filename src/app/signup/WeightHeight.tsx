@@ -1,68 +1,70 @@
-import Buttons from "@/components/common/Buttons";
-import GenderItems from "@/components/common/GenderItems";
-import React from "react";
+/* eslint-disable @next/next/no-img-element */
+import Buttons from "@/components/common/Button";
+import TextField from "@/components/common/TextField";
+import React, {useState} from "react";
+import Switch from "@/components/common/Switch";
 
 const weight = [
   {
-    title: "How much do you weigh?",
+    title: "How much do you weight?",
     placeholder: "15 lbs",
+    name: "current_weight",
   },
   {
     title: "What is your goal weight?",
     placeholder: "20 lbs",
+    name: "goal_weight",
   },
   {
     title: "How tall are you?",
     placeholder: "5 ft, 2 in",
+    name: "current_height",
   },
 ];
 
-interface WeightHeightProps {
-  handelNext?: () => void;
-}
+function WeightHeight() {
+  const [system, setSystem] = useState(true);
 
-function WeightHeight({handelNext}: WeightHeightProps) {
   return (
-    <section>
-      <div className="container max-w-[581px] m-auto text-center">
-        <div className="flex flex-col gap-16 mb-14">
-          {weight.map(({title, placeholder}, index) => (
-            <div key={index} className="group">
-              <div className="text-3xl leading-normal mb-9">{title}</div>
-              <div className="text-black mb-3">
-                <input
-                  className="w-full px-16 py-2.5 placeholder:text-2xl text-2xl placeholder:text-center border focus:border-gray-300 border-[#838383] rounded-lg .gender_item_shadow focus:outline-none"
-                  type="text"
-                  id=""
-                  placeholder={placeholder}
-                />
-              </div>
-              <div className="group-last:hidden">
-                <img
-                  className="w-full h-[1px]"
-                  src="/images/Vector 14.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          ))}
+    <div>
+      <div className="flex flex-col gap-16 mb-14">
+        {weight.map(({title, placeholder, name}, index) => (
+          <div key={index} className="flex flex-col">
+            <label className="mb-3">
+              <p className="text-3xl leading-normal mb-9 cursor-text">
+                {title}
+              </p>
+              <TextField name={name} placeholder={placeholder} />
+            </label>
+            <img
+              className="w-full h-[1px]"
+              src="/images/Vector 14.png"
+              alt=""
+            />
+          </div>
+        ))}
+      </div>
+      <div className="flex gap-3.5 items-center justify-center mb-6">
+        <div
+          className={`duration-100 text-xl font-medium leading-normal ${
+            system && "opacity-30"
+          }`}
+        >
+          Imperial System
         </div>
-        <div className="flex gap-3.5 items-center justify-center mb-[77px]">
-          <div className="text-xl font-medium leading-normal text-black/30">
-            Imperial System
-          </div>
-          <div className="bg-primary relative py-3.5 px-7 rounded-full">
-            <span className="absolute top-0.5 right-0.5 w-[22px] h-[22px] bg-white rounded-full"></span>
-          </div>
-          <div className="text-xl font-medium leading-normal">
-            Metric System
-          </div>
-        </div>
-        <div className="mb-28">
-          <Buttons onClick={handelNext} name="CONTINUE" />
+        <Switch
+          checked={system}
+          onChange={(e) => setSystem(e.target.checked)}
+        />
+        <div
+          className={`duration-100 text-xl font-medium leading-normal ${
+            !system && "opacity-30"
+          }`}
+        >
+          Metric System
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

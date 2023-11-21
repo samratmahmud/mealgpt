@@ -5,7 +5,7 @@
 @import url("../fonts/Inter/style.css");
 
 body {
-  @apply font-inter;
+  @apply font-inter text-black;
 }
 
 .btn_drop_shadow {
