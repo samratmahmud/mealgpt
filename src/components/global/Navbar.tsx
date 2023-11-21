@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="">
       <div className="flex justify-between gap-5 items-center container py-5">
-        <Link href="/signup">
+        <Link href="/">
           <img src="/images/Group 8.svg" alt="" />
         </Link>
         <div className="flex items-center gap-10">
@@ -17,12 +17,12 @@ function Navbar() {
           >
             How it Works
           </Link>
-          <div
-            role="button"
+          <Link
+            href={"/signup"}
             className="text-xl font-medium text-white bg-primary py-[3px] px-10 rounded-md leading-normal btn_drop_shadow"
           >
             Sign up
-          </div>
+          </Link>
         </div>
       </div>
     </nav>

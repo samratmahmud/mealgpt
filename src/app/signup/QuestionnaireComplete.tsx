@@ -1,7 +1,11 @@
 import Buttons from "@/components/common/Buttons";
 import React from "react";
 
-function QuestionnaireComplete() {
+interface GenderProps {
+  handelNext?: () => void;
+}
+
+function QuestionnaireComplete({handelNext}: GenderProps) {
   return (
     <section>
       <div className="container max-w-[689px] m-auto text-center mb-[478px]">
@@ -15,6 +19,7 @@ function QuestionnaireComplete() {
         </div>
         <div className="inline-block">
           <Buttons
+            onClick={handelNext}
             icon="/images/Google.png"
             name="Sign in with Google"
             rounded="16"

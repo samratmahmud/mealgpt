@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function FoodHeader() {
   return (
     <section>
       <div className="container mt-4">
@@ -21,4 +21,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default FoodHeader;
