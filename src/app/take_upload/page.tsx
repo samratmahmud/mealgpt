@@ -1,7 +1,6 @@
 "use client";
 import Navbar from "@/components/global/navbar/Navbar";
 import React, {useState} from "react";
-import Header from "./UploadHeader";
 import UploadImage from "./UploadImage";
 import PictureSections from "./PictureSections";
 import UploadHeader from "./UploadHeader";
