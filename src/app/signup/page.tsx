@@ -27,22 +27,22 @@ function PersonalizationPage() {
   };
 
   return (
-    <div className="flex flex-col justify-between min-h-screen pb-20">
+    <div className="flex flex-col justify-between min-h-screen md:mb-20 mb-10">
       <div>
         <Navbar />
 
-        <div className="container mt-4 mb-9">
-          <div className="bg-[#D9D9D9] w-full h-1 relative mb-5">
+        <div className="container px-1 mt-4 md:mb-9 mb-2">
+          <div className="bg-[#D9D9D9] w-full h-1 relative sm:mb-5 mb-1">
             <span
               className="absolute bg-primary h-1 duration-200 max-w-full"
-              style={{width: `${(100 / tabs.length) * (currentPage + 1)}%`}}
+              style={{width: `${(70 / tabs.length) * (currentPage + 1)}%`}}
             />
           </div>
-          <div className="flex gap-[25%] mb-8">
+          <div className="container flex lg:gap-[25%] gap-[6%] md:mb-8">
             <div
               onClick={handelPrev}
               role="button"
-              className={`hidden lg:block ${
+              className={`hidden md:block ${
                 currentPage === 0 ? "opacity-30" : ""
               }`}
             >
@@ -56,11 +56,15 @@ function PersonalizationPage() {
               />
             )}
           </div>
-          <img className="w-full h-[1px]" src="/images/Vector 14.png" alt="" />
+          <img
+            className="w-full h-[1px] hidden md:block"
+            src="/images/Vector 14.png"
+            alt=""
+          />
         </div>
 
         {currentPage < tabs.length && (
-          <div className="container max-w-xl text-center">
+          <div className="container max-w-[653px] text-center">
             {currentPage === 0 && <GoalGender />}
             {currentPage === 1 && <WeightHeight />}
             {currentPage === 2 && <ActivityLevel />}
@@ -82,7 +86,7 @@ function PersonalizationPage() {
       </div>
 
       {currentPage < tabs.length && (
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center md:mt-10 mt-6">
           <Button onClick={handelNext}>CONTINUE</Button>
         </div>
       )}

@@ -9,17 +9,21 @@ const goals = ["Gain Weight", "Lose Weight", "Gain Muscle", "Change My Diet"];
 function GoalsGender() {
   return (
     <div>
-      <div className="text-3xl leading-normal mb-10">
+      <div className="md:text-3xl text-[17px] leading-normal md:mb-10 mb-9 max-w-[261px] m-auto md:max-w-none">
         Let&apos;s get to know about you to calculate accurate goals
       </div>
-      <div className="mb-3">
-        <GenderSelection label="Male" />
-        <GenderSelection label="Female" />
+      <div className="flex md:flex-col flex-row gap-2 justify-between mb-20 md:mb-10">
+        <div className="mb-3 w-full">
+          <GenderSelection label="Male" />
+          <GenderSelection label="Female" />
+        </div>
+        <div className="w-[30%] md:w-full">
+          <TextField placeholder="Age" type="text" />
+        </div>
       </div>
-      <div className="mb-10">
-        <TextField placeholder="Age" type="text" />
+      <div className="md:text-3xl text-[17px] leading-normal md:mb-9 mb-7">
+        What are your goals?
       </div>
-      <div className="text-3xl leading-normal mb-9">What are your goals?</div>
       <div className="flex flex-col gap-3">
         {goals.map((item, index) => (
           <SelectOption name="goals" key={index} label={item} />

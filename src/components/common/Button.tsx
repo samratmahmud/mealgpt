@@ -29,7 +29,7 @@ function Button(props: buttonProps) {
   return (
     <Btn
       role="button"
-      className={`flex gap-4 items-center justify-center text-3xl font-medium leading-normal py-2.5 px-20 bg-primary text-white btn_drop_shadow ${
+      className={`flex gap-4 items-center justify-center md:text-3xl text-xl font-medium leading-normal md:py-2.5 py-[7px] px-20 bg-primary text-white btn_drop_shadow ${
         rounded === "8" ? "rounded-lg" : "rounded-2xl"
       } ${className || ""} ${disabled ? "opacity-30" : ""}`}
       disabled={disabled}

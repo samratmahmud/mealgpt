@@ -21,35 +21,41 @@ const steps = [
 
 function HowWorks() {
   return (
-    <section className="container mb-52">
-      <div className="text-2xl leading-[121%] text-primary mb-5">
+    <section className="container md:mb-52 mb-20">
+      <div className="md:text-2xl text-[17px] leading-[121%] text-primary md:mb-5 mb-1.5">
         How it Works
       </div>
-      <div className="grid grid-cols-2 gap-9 mb-32">
-        <div className="text-[40px] font-medium leading-[41px]">
+      <div className="grid lg:grid-cols-2 gap-9 md:mb-32 mb-16">
+        <div className="md:text-[40px] text-2xl font-medium leading-[102%] max-w-[327px] md:max-w-none">
           Start Your Journey to a Healthier You Today in 3 Easy Steps!
         </div>
         <img
           src="/images/Vector 14.png"
-          className="h-[1px] w-full mt-5"
+          className="h-[1px] w-full mt-5 hidden lg:block"
           alt=""
         />
       </div>
-      <div className="flex text-center gap-12">
+      <div className="flex lg:flex-row flex-col lg:text-center gap-12">
         {steps.map(({title, contain}, index) => (
           <div key={index} className="group">
-            <div className="mb-[72px] inline-block relative z-0">
-              <span className="relative z-20 text-white bg-primary py-1.5 px-4 rounded text-3xl block">
-                {index + 1}
-              </span>
-              <img
-                className="h-[1px] w-[450px] max-w-none absolute z-10 top-1/2 translate-y-1/2 group-last:hidden"
-                src="/images/Vector 37 (1).png"
-                alt=""
-              />
+            <div className="hidden lg:block">
+              <div className="mb-[72px] inline-block relative z-0">
+                <span className="relative z-20 text-white bg-primary py-1.5 px-4 rounded text-3xl block">
+                  {index + 1}
+                </span>
+                <img
+                  className="h-[1px] xl:w-[440px] lg:w-[350px] max-w-none absolute z-10 top-1/2 translate-y-1/2 group-last:hidden"
+                  src="/images/Vector 37 (1).png"
+                  alt=""
+                />
+              </div>
             </div>
-            <div className="text-3xl mb-6 text-[#121512]">{title}</div>
-            <div className="text-2xl text-[#121512]/60">{contain}</div>
+            <div className="md:text-3xl text-xl leading-normal md:mb-6 mb-3 text-[#121512]">
+              {title}
+            </div>
+            <div className="md:text-2xl text-[17px] leading-normal text-[#121512]/60">
+              {contain}
+            </div>
           </div>
         ))}
       </div>

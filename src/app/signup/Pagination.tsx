@@ -11,7 +11,7 @@ function Pagination(props: PaginationProps) {
   const {currentPage, setCurrentPage, tabs} = props;
 
   return (
-    <div className="flex gap-5">
+    <div className="flex sm:gap-5 gap-3">
       {tabs.map((name, index) => {
         const isActive = currentPage === index;
 
@@ -23,20 +23,20 @@ function Pagination(props: PaginationProps) {
             className="flex items-center group"
           >
             <div
-              className={`text-base lg:text-[#F8F6F6] text-[#F8F6F6]/[30%] py-0.5 px-2 bg-primary rounded-sm mr-3 ${
+              className={`sm:text-base text-[10px] lg:text-[#F8F6F6] text-[#F8F6F6]/[30%] py-0.5 sm:px-2 px-1 bg-primary rounded-sm md:mr-3 mr-1.5 ${
                 isActive ? "" : "opacity-30"
               }`}
             >
               {index + 1}
             </div>
             <div
-              className={`text-base font-medium leading-9 mr-4 ${
+              className={`sm:text-base text-[10px] font-medium leading-9 sm:mr-4 mr-2 whitespace-nowrap ${
                 isActive ? "" : "opacity-30"
               }`}
             >
               {name}
             </div>
-            <div className="group-last:hidden">
+            <div className="group-last:hidden flex-shrink-0">
               <img src="/images/Forward.svg" alt="" />
             </div>
           </div>

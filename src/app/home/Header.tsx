@@ -4,21 +4,22 @@ import React from "react";
 
 function Header() {
   return (
-    <section className="mt-4 mb-44">
-      <div className="flex items-center container">
+    <section className="mt-4 md:mb-44 mb-9">
+      <div className="flex lg:flex-row flex-col items-center container">
         <div className="">
-          <div className="text-[80px] font-bold leading-[96%] mb-10">
+          <div className="lg:text-[80px] text-[34px] font-bold leading-[96%] lg:mb-10 mb-7">
             Set Your Goals & Track Your Progress
           </div>
-          <div className="text-2xl text-[#121512] mb-16 max-w-[672px]">
+          <div className="lg:text-2xl text-xl leading-[128%] text-[#121512] lg:mb-16 mb-8 max-w-[672px] mr-6 md:mr-0">
             Take a picture of your meals and instantly generate nutritional
-            information
+            information{" "}
+            <span className="lg:hidden">(calories, protien, etc...) </span>
           </div>
-          <div className="mb-3.5">
+          <div className="md:mb-3.5 mb-1.5">
             <Link
-              href="/signup"
+              href="/"
               role="button"
-              className="text-2xl font-semibold bg-primary py-[13px] px-14 inline-block text-white rounded-lg btn_drop_shadow"
+              className="md:text-2xl text-xl md:font-semibold font-bold leading-normal bg-primary md:py-[13px] py-[7px] px-14 inline-block text-white rounded-lg btn_drop_shadow"
             >
               Try it for free
             </Link>
@@ -27,10 +28,10 @@ function Header() {
             No credit card info needed
           </div>
         </div>
-        <div className="-mr-[190px]">
-          <div className="relative z-0 after:block after:content-[''] after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-[#D46363]/[15%] after:rounded-full after:w-full after:h-full after:absolute pl-0 pr-48 pt-[105px] py-[92px] after:[filter:blur(54px)] after:-z-10">
+        <div className="lg:-mr-[190px]">
+          <div className="relative z-0 after:block after:content-[''] after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-[#D46363]/[15%] after:rounded-full after:w-full after:h-full after:absolute md:pl-0 md:pr-48 pr-20 md:pt-[105px] pt-16 md:py-[92px] after:[filter:blur(54px)] after:-z-10">
             <img
-              className="max-w-none"
+              className="md:max-w-none"
               src="/images/header_image (1).svg"
               alt=""
             />

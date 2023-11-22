@@ -11,7 +11,7 @@ function SelectOption(props: SelectOptionProps) {
   return (
     <label role="button" className={className}>
       <input type="radio" className="peer hidden" {...rest} />
-      <div className="text-2xl leading-normal py-2 px-16 border border-[#838383] rounded-lg gender_item_shadow peer-checked:text-white peer-checked:bg-primary">
+      <div className="md:text-2xl text-[17px] leading-normal md:py-2.5 py-2 px-16 border border-[#838383] rounded-lg gender_item_shadow peer-checked:text-white peer-checked:bg-primary">
         {label}
       </div>
     </label>

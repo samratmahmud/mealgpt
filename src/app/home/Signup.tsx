@@ -4,18 +4,23 @@ import React from "react";
 
 function Signup() {
   return (
-    <section className="py-44 relative mb-12 after:content[''] after:block after:inset-0 after:bg-[#D46363]/[15%] after:absolute after:[filter:blur(54px)] after:-z-10">
+    <section className="lg:py-44 py-24 relative md:mb-12 after:content[''] after:block after:inset-0 after:bg-[#D46363]/[15%] after:absolute after:[filter:blur(54px)] after:-z-10">
       <div className="container">
-        <div className="flex gap-16 items-center">
-          <div className="text-[40px] font-medium leading-[102%] max-w-[570px]">
-            Sign up now and Signup the future of dietary tracking!
+        <div className="flex lg:flex-row flex-col lg:gap-16 items-center">
+          <div className="md:text-[40px] text-2xl font-medium leading-[102%] md:max-w-[570px] max-w-[324px] text-center md:text-left">
+            Sign up now and experience the future of dietary tracking!
           </div>
-          <div className="-mt-[8%]">
-            <img src="/images/Vector 7.svg" alt="" />
+          <div className="lg:-mt-[8%] mb-6 lg:mb-0">
+            <img
+              className="hidden lg:block"
+              src="/images/Vector 7.svg"
+              alt=""
+            />
+            <img className="lg:hidden" src="/images/Vector 7 (1).svg" alt="" />
           </div>
           <Link
             href="/signup"
-            className="text-3xl font-semibold text-white py-4 px-[106px] rounded-lg bg-primary whitespace-nowrap"
+            className="md:text-3xl text-xl md:font-semibold font-bold leading-normal text-white md:py-4 md:px-[106px] py-[7px] px-12 rounded-lg bg-primary whitespace-nowrap"
           >
             Try it for free
           </Link>
