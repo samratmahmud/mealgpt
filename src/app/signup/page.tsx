@@ -78,7 +78,9 @@ function PersonalizationPage() {
             {currentPage === 4 && (
               <div>
                 <Congratulations handelNext={handelNext} />
-                <Button href="/foodvlog">CONTINUE</Button>
+                <div className="flex justify-center">
+                  <Button href="/foodvlog">CONTINUE</Button>
+                </div>
               </div>
             )}
           </div>

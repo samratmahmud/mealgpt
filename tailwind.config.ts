@@ -20,14 +20,14 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: "1.5rem",
+        DEFAULT: "1.250rem",
       },
     },
     screens: {
       sm: "645px",
       md: "768px",
       lg: "1024px",
-      xl: "1362px",
+      xl: "1354px",
     },
   },
   plugins: [],

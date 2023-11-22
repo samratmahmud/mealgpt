@@ -18,8 +18,9 @@ function TakeUploadPage() {
 
   return (
     <main>
-      <Navbar />
-
+      <div className="hidden md:block">
+        <Navbar />
+      </div>
       <div
         style={{
           backgroundImage:
