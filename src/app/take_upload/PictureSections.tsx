@@ -19,21 +19,25 @@ const items = [
 function PictureSections() {
   return (
     <section className="pb-6">
-      <div className="flex justify-center bg-white py-4 mb-5">
-        <img src="/images/Rectangle 75.png" alt="" />
+      <div className="flex justify-center bg-white md:py-4 md:mb-5 mb-6">
+        <img className="md:rounded-2xl" src="/images/Rectangle 75.png" alt="" />
       </div>
-      <div className="max-w-[637px] m-auto">
-        <div className="flex items-center justify-end gap-24 mb-6">
-          <div className="text-3xl leading-normal">Salad Bowl with Veggies</div>
-          <div role="button">
+      <div className="max-w-[637px] m-auto container">
+        <div className="flex items-center md:justify-end justify-center gap-24 md:mb-6 mb-7">
+          <div className="md:text-3xl text-xl leading-normal">
+            Salad Bowl with Veggies
+          </div>
+          <div role="button" className="hidden md:inline">
             <img src="/images/Trash.svg" alt="" />
           </div>
         </div>
-        <div className="flex gap-14 justify-center mb-[75px]">
+        <div className="flex md:gap-14 gap-6 justify-center md:mb-[75px] mb-8">
           {items.map(({title, number}, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="text-xl leading-normal">{title}</div>
-              <div className="text-[40px] font-bold leading-normal text-primary">
+              <div className="md:text-xl text-[13px] leading-normal">
+                {title}
+              </div>
+              <div className="md:text-[40px] text-3xl font-bold leading-normal text-primary">
                 {number}
               </div>
             </div>
@@ -41,7 +45,7 @@ function PictureSections() {
         </div>
         <div
           role="button"
-          className="text-3xl font-medium leading-normal bg-primary text-white py-2.5 px-16 text-center rounded-lg w-3/4 m-auto"
+          className="md:text-3xl text-xl font-medium leading-normal bg-primary text-white md:py-2.5 py-2 text-center rounded-lg w-3/4 m-auto"
         >
           ADD TO “Breakfast”
         </div>

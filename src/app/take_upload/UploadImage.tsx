@@ -13,8 +13,8 @@ function UploadImage(props: UploadImageProps) {
 
   return (
     <section>
-      <div className="pb-14 container px-12">
-        <div className="py-56 bg-white mb-12">
+      <div className="pb-14 md:px-12">
+        <div className="md:py-56 py-36 bg-white md:mb-12 mb-6">
           <div className="flex justify-center mb-5">
             <label className="text-2xl font-semibold leading-normal bg-primary py-[11px] px-14 text-white rounded-lg .btn_drop_shadow">
               <input
@@ -26,13 +26,18 @@ function UploadImage(props: UploadImageProps) {
               Upload Image
             </label>
           </div>
-          <div className="text-[13px] font-semibold leading-normal text-center text-black/50">
+          <div className="text-[13px] font-semibold leading-normal text-center text-black/50 hidden md:block">
             or drag and drop an image
           </div>
         </div>
-        <div className="max-w-[581px] m-auto mb-14">
+        <div className="md:hidden">
+          <div className="flex justify-center mb-7 md:mb-0">
+            <img src="/images/Group 147.svg" alt="" />
+          </div>
+        </div>
+        <div className="max-w-[581px] m-auto mb-14 px-4">
           <textarea
-            className="py-3 px-5 w-full h-32 rounded-lg placeholder:text-2xl leading-normal focus:outline-none text-2xl"
+            className="md:py-3 py-2.5 px-5 w-full md:h-32 h-11 rounded-lg md:placeholder:text-2xl placeholder:text-[17px] leading-normal focus:outline-none md:text-2xl text-[17px]"
             name=""
             id=""
             placeholder="Add a description (optional)"
