@@ -27,7 +27,7 @@ function PersonalizationPage() {
   };
 
   return (
-    <div className="flex flex-col justify-between min-h-screen md:mb-20 mb-10">
+    <div className="flex flex-col justify-between min-h-screen md:mb-28 mb-11">
       <div>
         <Navbar />
 
@@ -35,7 +35,7 @@ function PersonalizationPage() {
           <div className="bg-[#D9D9D9] w-full h-1 relative sm:mb-5 mb-1">
             <span
               className="absolute bg-primary h-1 duration-200 max-w-full"
-              style={{width: `${(70 / tabs.length) * (currentPage + 1)}%`}}
+              style={{width: `${(73 / tabs.length) * (currentPage + 1)}%`}}
             />
           </div>
           <div className="container flex lg:gap-[25%] gap-[6%] md:mb-8">

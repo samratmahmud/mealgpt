@@ -12,7 +12,7 @@ const activityLevel = [
 function ActivityLevel() {
   return (
     <div>
-      <div className="text-3xl leading-normal mb-9">
+      <div className="md:text-3xl text-[17px] leading-normal md:mb-9 mb-7">
         What is your activity level?
       </div>
       <div className="flex flex-col gap-3">
