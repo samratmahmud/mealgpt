@@ -9,7 +9,7 @@ interface PanelProps {
   color?: "light" | "primary";
 }
 
-function Panel(props: PanelProps) {
+function ResultPanel(props: PanelProps) {
   const {calories, carbs, name, nameM, protein, color = "light"} = props;
 
   let colorClasses = "";
@@ -52,4 +52,4 @@ function PanelValue({label, value}: {label: string; value?: number}) {
   );
 }
 
-export default Panel;
+export default ResultPanel;

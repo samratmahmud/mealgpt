@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 
-function FoodHeader() {
+function Navigation() {
   return (
     <section>
       <div className="container mt-8">
@@ -17,7 +17,7 @@ function FoodHeader() {
             </h4>
             <p className="md:text-2xl text-[17px] leading-normal">Thursday</p>
           </div>
-          <Link href="/take_upload" role="button">
+          <Link href="/upload_meal" role="button">
             <img className="rotate-180" src="/images/Arrow.svg" alt="" />
           </Link>
         </div>
@@ -26,4 +26,4 @@ function FoodHeader() {
   );
 }
 
-export default FoodHeader;
+export default Navigation;

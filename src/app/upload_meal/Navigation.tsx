@@ -3,7 +3,7 @@ import Logo from "@/components/global/navbar/Logo";
 import Link from "next/link";
 import React from "react";
 
-function UploadHeader() {
+function Navigation() {
   return (
     <section>
       <div className="container md:py-9 pt-3.5 pb-10">
@@ -34,4 +34,4 @@ function UploadHeader() {
   );
 }
 
-export default UploadHeader;
+export default Navigation;

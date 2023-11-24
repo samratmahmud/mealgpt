@@ -3,9 +3,9 @@ import Navbar from "@/components/global/navbar/Navbar";
 import React, {useState} from "react";
 import UploadImage from "./UploadImage";
 import ImagePreview from "./ImagePreview";
-import UploadHeader from "./UploadHeader";
+import Navigation from "./Navigation";
 
-function TakeUploadPage() {
+function UploadMeal() {
   const [imageSelected, setImageSelected] = useState(false);
 
   const [preview, setPreview] = useState(false);
@@ -27,7 +27,7 @@ function TakeUploadPage() {
             "linear-gradient(179deg, #F6ECEC 1.04%, rgba(246, 236, 236, 0.00) 394.08%)",
         }}
       >
-        <UploadHeader />
+        <Navigation />
         {!preview && (
           <UploadImage
             handleImage={handleImageChange}
@@ -41,4 +41,4 @@ function TakeUploadPage() {
   );
 }
 
-export default TakeUploadPage;
+export default UploadMeal;

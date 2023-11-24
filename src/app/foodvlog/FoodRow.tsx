@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-export interface LogItemProps {
+export interface FoodRowProps {
   name: string;
   description?: string;
   calories?: number;
@@ -10,7 +10,7 @@ export interface LogItemProps {
   images?: string[];
 }
 
-function LogItem(props: LogItemProps) {
+function FoodRow(props: FoodRowProps) {
   const {name, description, calories, protein, carbs, images} = props;
 
   const isLogs = calories && protein && carbs;
@@ -95,4 +95,4 @@ function PreviewLog({label, value}: {label: string; value?: number}) {
   );
 }
 
-export default LogItem;
+export default FoodRow;
