@@ -45,7 +45,7 @@ function PictureSections() {
         </div>
         <div
           role="button"
-          className="md:text-3xl text-xl font-medium leading-normal bg-primary text-white md:py-2.5 py-2 text-center rounded-lg w-3/4 m-auto"
+          className="md:text-3xl text-xl font-medium leading-normal bg-primary text-white md:py-2.5 py-2 text-center rounded-lg w-3/4 m-auto btn_drop_shadow"
         >
           ADD TO “Breakfast”
         </div>

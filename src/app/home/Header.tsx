@@ -19,7 +19,7 @@ function Header() {
             <Link
               href="/"
               role="button"
-              className="md:text-2xl text-xl md:font-semibold font-bold leading-normal bg-primary md:py-[13px] py-[7px] px-14 inline-block text-white rounded-lg btn_drop_shadow"
+              className="md:text-2xl text-xl md:font-semibold font-bold leading-normal bg-primary md:py-3.5 py-2 px-14 inline-block text-white rounded-lg btn_drop_shadow"
             >
               Try it for free
             </Link>
@@ -29,7 +29,7 @@ function Header() {
           </div>
         </div>
         <div className="lg:-mr-[190px]">
-          <div className="relative z-0 after:block after:content-[''] after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-[#D46363]/[15%] after:rounded-full after:w-full after:h-full after:absolute md:pl-0 md:pr-48 pr-20 md:pt-[105px] pt-16 md:py-[92px] after:[filter:blur(54px)] after:-z-10">
+          <div className="header-svg">
             <img
               className="md:max-w-none"
               src="/images/header_image (1).svg"

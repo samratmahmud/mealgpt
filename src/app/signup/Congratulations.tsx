@@ -29,7 +29,7 @@ function Congratulations({handelNext}: GenderProps) {
       <div className="md:text-2xl text-[17px] leading-normal md:mb-[75px] mb-2.5 max-w-[275px] m-auto md:max-w-none">
         Your personalized daily goals are ready:
       </div>
-      <div className="relative after:content-[''] after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-[#D4636326] after:absolute after:-z-10 md:py-[77px] py-9 md:px-40 px-14 after:rounded-full after:blur-[54px] md:mb-12 mb-6">
+      <div className="congrats-status-wrapper">
         <div className="grid grid-cols-2 md:grid-cols-3 md:gap-28 gap-10">
           {counts.map(({title, number}, index) => (
             <div
@@ -46,7 +46,7 @@ function Congratulations({handelNext}: GenderProps) {
           ))}
         </div>
       </div>
-      <div className="relative after:content-[''] after:top-0 after:bottom-0 after:left-0 after:right-0 after:bg-[#D4636326] after:absolute after:-z-10 py-6 after:rounded-full after:blur-[54px] md:after:w-80 after:w-44 after:m-auto md:mb-16 mb-8">
+      <div className="congrats-total-preview">
         <div className="md:text-2xl text-[17px] leading-normal">
           Pounds to lose per week
         </div>

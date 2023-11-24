@@ -44,7 +44,7 @@ function Panel(props: PanelProps) {
 function PanelValue({label, value}: {label: string; value?: number}) {
   return (
     <div className="flex flex-col items-center gap-1">
-      <div className="text-[13px] leading-normal">{label}</div>
+      <p className="text-[13px] leading-normal">{label}</p>
       <div className="md:text-2xl text-xl font-bold leading-normal">
         {value || "-"}
       </div>

@@ -20,7 +20,7 @@ function Signup() {
           </div>
           <Link
             href="/signup"
-            className="md:text-3xl text-xl md:font-semibold font-bold leading-normal text-white md:py-4 md:px-[106px] py-[7px] px-12 rounded-lg bg-primary whitespace-nowrap"
+            className="md:text-3xl text-xl md:font-semibold font-bold leading-normal text-white md:py-4 md:px-28 py-2 px-12 rounded-lg bg-primary whitespace-nowrap btn_drop_shadow"
           >
             Try it for free
           </Link>

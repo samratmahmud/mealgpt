@@ -3,7 +3,7 @@ import React from "react";
 
 function Source() {
   return (
-    <section className="bg-primary md:pt-[122px] pt-14  md:pb-40 pb-20 md:mb-[30px] mb-12">
+    <section className="bg-primary md:pt-32 pt-14  md:pb-40 pb-20 md:mb-8 mb-12">
       <div className="container">
         <div className="md:text-[40px] text-[34px] text-white font-bold leading-10 mb-7 md:text-center max-w-[218px] md:max-w-none">
           Proudly open-source
