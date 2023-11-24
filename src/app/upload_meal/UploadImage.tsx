@@ -5,17 +5,51 @@ import Button from "@/components/common/Button";
 
 interface UploadImageProps {
   handleImage: (event: any) => void;
-  imageSelected: boolean;
+  imageSelected: File | null;
   goPreview: () => void;
 }
 
 function UploadImage(props: UploadImageProps) {
   const {handleImage, imageSelected, goPreview} = props;
 
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleDragEnter = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      handleImage(files[0]);
+    }
+  };
+
   return (
     <section>
       <div className="pb-14 md:px-12 container">
-        <div className="md:py-56 py-36  bg-white md:mb-12 mb-6">
+        <div
+          className={`md:py-56 py-36 bg-white md:mb-12 mb-6 ${
+            isDragging ? "border-dashed border-2 border-primary" : ""
+          }`}
+          aria-label="drag area"
+          onDragEnter={handleDragEnter}
+          onDragLeave={handleDragLeave}
+          onDragOver={handleDragOver}
+          onDrop={handleDrop}
+        >
           <div className="flex justify-center mb-5">
             <label
               className="text-2xl font-semibold leading-normal bg-primary py-[11px] px-14 text-white rounded-lg .btn_drop_shadow focus:scale-95"
@@ -26,7 +60,7 @@ function UploadImage(props: UploadImageProps) {
                 type="file"
                 className="hidden"
                 accept="image/*"
-                onChange={handleImage}
+                onChange={(e) => handleImage(e.target.files?.[0])}
               />
               Upload Image
             </label>

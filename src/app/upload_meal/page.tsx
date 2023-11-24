@@ -1,19 +1,17 @@
 "use client";
 import Navbar from "@/components/global/navbar/Navbar";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import UploadImage from "./UploadImage";
 import ImagePreview from "./ImagePreview";
 import Navigation from "./Navigation";
 
 function UploadMeal() {
-  const [imageSelected, setImageSelected] = useState(false);
+  const [imageSelected, setImageSelected] = useState<File | null>(null);
 
   const [preview, setPreview] = useState(false);
 
-  const handleImageChange = (event: any) => {
-    // Check if there is a selected file
-    const file = event.target.files[0];
-    setImageSelected(!!file);
+  const handleImageChange = (file: File) => {
+    setImageSelected(file);
   };
 
   return (
@@ -32,10 +30,12 @@ function UploadMeal() {
           <UploadImage
             handleImage={handleImageChange}
             imageSelected={imageSelected}
-            goPreview={() => setPreview(true)}
+            goPreview={() => setPreview(!!imageSelected)}
           />
         )}
-        {preview && <ImagePreview />}
+        {preview && imageSelected !== null && (
+          <ImagePreview file={imageSelected} />
+        )}
       </div>
     </main>
   );
