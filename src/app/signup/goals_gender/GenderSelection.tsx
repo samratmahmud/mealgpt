@@ -1,10 +1,10 @@
 import React from "react";
 
-interface checkedProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface GenderSelection extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
 }
 
-function GenderSelection(props: checkedProps) {
+function GenderSelection(props: GenderSelection) {
   const {label, type, name, className, value, ...rest} = props;
 
   return (

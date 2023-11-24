@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, {useState} from "react";
 import Button from "@/components/common/Button";
@@ -37,7 +38,7 @@ function UploadImage(props: UploadImageProps) {
         </div>
         <div className="max-w-[581px] m-auto mb-14 px-4">
           <textarea
-            className="md:py-3 py-2.5 px-5 w-full md:h-32 h-11 rounded-lg md:placeholder:text-2xl placeholder:text-[17px] leading-normal focus:outline-none md:text-2xl text-[17px]"
+            className="md:py-3 py-2.5 px-5 w-full md:h-32 h-11 rounded-lg md:placeholder:text-2xl placeholder:text-[17px] leading-normal focus:outline-none md:text-2xl text-[17px] resize-none"
             name=""
             id=""
             placeholder="Add a description (optional)"

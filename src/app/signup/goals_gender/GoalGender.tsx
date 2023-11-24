@@ -14,7 +14,7 @@ function GoalsGender() {
       </div>
       <div className="flex md:flex-col flex-row gap-2 justify-between mb-20 md:mb-10">
         <div className="mb-3 w-full">
-          <GenderSelection label="Male" />
+          <GenderSelection defaultChecked label="Male" />
           <GenderSelection label="Female" />
         </div>
         <div className="w-[30%] md:w-full">

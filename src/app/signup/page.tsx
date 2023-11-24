@@ -27,7 +27,7 @@ function PersonalizationPage() {
   };
 
   return (
-    <div className="flex flex-col justify-between min-h-screen md:mb-28 mb-11">
+    <div className="flex flex-col justify-between min-h-[calc(100vh-64px)] md:mb-28 mb-11">
       <div>
         <Navbar />
 
