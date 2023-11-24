@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import React from "react";
 
 function Source() {
@@ -12,13 +13,14 @@ function Source() {
           Our source code is available on GitHub - feel free to read, review, or
           contribute to it however you want!
         </div>
-        <div
-          role="button"
-          className="flex gap-3 bg-white md:py-2 py-1 md:px-16 px-7 rounded-lg justify-center md:max-w-[210px] max-w-[126px] md:m-auto text-2xl font-medium btn_drop_shadow"
+        <Link
+          href="/"
+          className="flex gap-3 bg-white md:py-2 py-1 md:px-16 px-7 rounded-lg justify-center md:max-w-[210px] max-w-[126px] md:m-auto text-2xl font-medium btn_drop_shadow focus:scale-95"
+          tabIndex={-1}
         >
           <img className="hidden md:block" src="/images/Vector.svg" alt="" />{" "}
           Star
-        </div>
+        </Link>
       </div>
     </section>
   );

@@ -17,9 +17,9 @@ function Header() {
           </div>
           <div className="md:mb-3.5 mb-1.5">
             <Link
-              href="/"
+              href="/signup"
               role="button"
-              className="md:text-2xl text-xl md:font-semibold font-bold leading-normal bg-primary md:py-3.5 py-2 px-14 inline-block text-white rounded-lg btn_drop_shadow"
+              className="md:text-2xl text-xl md:font-semibold font-bold leading-normal bg-primary md:py-3.5 py-2 px-14 inline-block text-white rounded-lg btn_drop_shadow focus:scale-95"
             >
               Try it for free
             </Link>

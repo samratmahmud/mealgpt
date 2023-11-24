@@ -16,7 +16,7 @@ const items = [
   },
 ];
 
-function PictureSections() {
+function ImagePreview() {
   return (
     <section className="pb-6">
       <div className="flex justify-center bg-white md:py-4 md:mb-5 mb-6">
@@ -43,15 +43,16 @@ function PictureSections() {
             </div>
           ))}
         </div>
-        <div
+        <button
           role="button"
-          className="md:text-3xl text-xl font-medium leading-normal bg-primary text-white md:py-2.5 py-2 text-center rounded-lg w-3/4 m-auto btn_drop_shadow"
+          className="md:text-3xl text-xl font-medium leading-normal bg-primary text-white md:py-2.5 py-2 text-center rounded-lg w-3/4 m-auto btn_drop_shadow focus:scale-95"
+          tabIndex={1}
         >
           ADD TO “Breakfast”
-        </div>
+        </button>
       </div>
     </section>
   );
 }
 
-export default PictureSections;
+export default ImagePreview;

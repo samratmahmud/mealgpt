@@ -2,7 +2,7 @@
 import Navbar from "@/components/global/navbar/Navbar";
 import React, {useState} from "react";
 import UploadImage from "./UploadImage";
-import PictureSections from "./PictureSections";
+import ImagePreview from "./ImagePreview";
 import UploadHeader from "./UploadHeader";
 
 function TakeUploadPage() {
@@ -35,7 +35,7 @@ function TakeUploadPage() {
             goPreview={() => setPreview(true)}
           />
         )}
-        {preview && <PictureSections />}
+        {preview && <ImagePreview />}
       </div>
     </main>
   );

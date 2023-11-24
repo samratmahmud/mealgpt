@@ -4,7 +4,7 @@ import React from "react";
 
 function Signup() {
   return (
-    <section className="lg:py-44 py-24 relative md:mb-12 after:content[''] after:block after:inset-0 after:bg-[#D46363]/[15%] after:absolute after:[filter:blur(54px)] after:-z-10">
+    <section className="signup-section after:content-['']">
       <div className="container">
         <div className="flex lg:flex-row flex-col lg:gap-16 items-center">
           <div className="md:text-[40px] text-2xl font-medium leading-[102%] md:max-w-[570px] max-w-[324px] text-center md:text-left">
@@ -20,7 +20,8 @@ function Signup() {
           </div>
           <Link
             href="/signup"
-            className="md:text-3xl text-xl md:font-semibold font-bold leading-normal text-white md:py-4 md:px-28 py-2 px-12 rounded-lg bg-primary whitespace-nowrap btn_drop_shadow"
+            className="md:text-3xl text-xl md:font-semibold font-bold leading-normal text-white md:py-4 md:px-28 py-2 px-12 rounded-lg bg-primary whitespace-nowrap btn_drop_shadow focus:scale-95"
+            tabIndex={-1}
           >
             Try it for free
           </Link>

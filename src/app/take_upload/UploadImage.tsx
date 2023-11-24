@@ -14,10 +14,14 @@ function UploadImage(props: UploadImageProps) {
 
   return (
     <section>
-      <div className="pb-14 md:px-12">
-        <div className="md:py-56 py-36 bg-white md:mb-12 mb-6">
+      <div className="pb-14 md:px-12 container">
+        <div className="md:py-56 py-36  bg-white md:mb-12 mb-6">
           <div className="flex justify-center mb-5">
-            <label className="text-2xl font-semibold leading-normal bg-primary py-[11px] px-14 text-white rounded-lg .btn_drop_shadow">
+            <label
+              className="text-2xl font-semibold leading-normal bg-primary py-[11px] px-14 text-white rounded-lg .btn_drop_shadow focus:scale-95"
+              role="button"
+              tabIndex={-1}
+            >
               <input
                 type="file"
                 className="hidden"

@@ -11,7 +11,7 @@ function NavbarButton(props: NavbarButtonProps) {
   return (
     <Link
       href="/signup"
-      className="text-xl font-medium text-white bg-primary py-[3px] px-10 rounded-md leading-normal btn_drop_shadow"
+      className="text-xl font-medium text-white bg-primary py-[3px] px-10 rounded-md leading-normal btn_drop_shadow focus:scale-95"
     >
       {children}
     </Link>
